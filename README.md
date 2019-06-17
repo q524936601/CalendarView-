@@ -8,6 +8,7 @@
             三、……
 
 2、概要设计：一、CalendarView 控件的运用与实现，通过CalendarView展示日历的正常显示
+               https://www.jb51.net/article/158010.htm
             二、在主活动中 通过设置setOnDataChangeListener() 来为CalendarView添加监听事件，从而实现其他功能的基本“入口”
             三、TextView控件通过监听事件显示当前点击日期的完整日期（Year年/Month月/Dayofmonth日）
             四、接入API，通过接入具备不同功能的日历相关的API，结合CalendarView的监听事件，通过监听不同的日期实现显示对应日期的万年历、黄历每日吉凶宜             忌查询、周公解梦、星座运势、历史上的今天等完善功能
