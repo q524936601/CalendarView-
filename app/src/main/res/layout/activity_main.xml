@@ -69,6 +69,7 @@
             android:text="今天"
             android:textColor="#000"
             android:textSize="14sp"
+            android:background="@drawable/one"
             tools:ignore="OnClick" />
 
         <TextView
@@ -80,6 +81,7 @@
             android:text="某天"
             android:textColor="#000"
             android:textSize="14sp"
+            android:background="@drawable/one"
             tools:ignore="OnClick" />
 
         <TextView
@@ -91,6 +93,7 @@
             android:text="首月"
             android:textColor="#000"
             android:textSize="14sp"
+            android:background="@drawable/one"
             tools:ignore="OnClick" />
 
         <TextView
@@ -102,6 +105,7 @@
             android:text="上年"
             android:textColor="#000"
             android:textSize="14sp"
+            android:background="@drawable/one"
             tools:ignore="OnClick" />
 
         <TextView
@@ -113,6 +117,7 @@
             android:text="下年"
             android:textColor="#000"
             android:textSize="14sp"
+            android:background="@drawable/one"
             tools:ignore="OnClick" />
 
     </LinearLayout>
