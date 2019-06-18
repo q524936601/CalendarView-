@@ -17,6 +17,12 @@ import com.othershe.calendarview.listener.OnSingleChooseListener;
 import com.othershe.calendarview.utils.CalendarUtil;
 import com.othershe.calendarview.weiget.CalendarView;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
+
 public class MainActivity extends AppCompatActivity {
     private CalendarView calendarView;
     private TextView chooseDate;
@@ -29,7 +35,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextView title = (TextView)findViewById(R.id.title);
         chooseDate = findViewById(R.id.choose_date);
-        
+        /*String address = ""
+        HttpUtils.sendOkhttpRequest(address, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+            }
+        });*/
         calendarView = (CalendarView)findViewById(R.id.calendar);
         calendarView
                 .setStartEndDate("1990.1","2099.12")
