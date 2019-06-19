@@ -216,6 +216,8 @@ public class MainActivity extends AppCompatActivity {
                             viewHolder.lucky.setText(result.getHuangli().getJi().toString());
                             viewHolder.fierce.setText(result.getHuangli().getXiongshen());
                             viewHolder.tiangan.setText(result.getGanzhi());
+                            viewHolder.yi.setText(result.getHuangli().getYi().toString());
+                            viewHolder.ji.setText(result.getHuangli().getJi().toString());
                             return convertView;
                         }
                         class ViewHolder {
@@ -227,6 +229,8 @@ public class MainActivity extends AppCompatActivity {
                             public TextView lucky;
                             public TextView fierce;
                             public TextView tiangan;
+                            public TextView yi;
+                            public TextView ji;
 
                             public ViewHolder(View rootView) {
                                 this.rootView = rootView;
@@ -237,6 +241,8 @@ public class MainActivity extends AppCompatActivity {
                                 this.lucky= (TextView) rootView.findViewById(R.id.lucky);
                                 this.fierce=(TextView)rootView.findViewById(R.id.fierce);
                                 this.tiangan=(TextView)rootView.findViewById(R.id.tiangan);
+                                this.yi=(TextView)rootView.findViewById(R.id.yi);
+                                this.ji=(TextView)rootView.findViewById(R.id.ji);
 
                             }
 
