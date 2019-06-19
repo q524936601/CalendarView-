@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 .init();
 
         title.setText(cDate[0] + "年" + cDate[1] + "月");
-        chooseDate.setText("当前选中的日期：" + cDate[0] + cDate[1] + "月" + cDate[2] + "日");
+        chooseDate.setText("当前选中的日期：" + cDate[0] +"年"+ cDate[1] + "月" + cDate[2] + "日");
 
         calendarView.setOnPagerChangeListener(new OnPagerChangeListener() {
             @Override
@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity {
             super.handleMessage(msg);
             switch (msg.what) {
                 case SUCCESS:
+                    listdata.clear();
                     String json = (String) msg.obj;
                     information information = new Gson().fromJson(json, cn.edu.gdpt.myapplication.information.class);
                     listdata.add(information);
@@ -189,12 +190,12 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public Object getItem(int position) {
-                            return null;
+                            return listdata.get(position);
                         }
 
                         @Override
                         public long getItemId(int position) {
-                            return 0;
+                            return position;
                         }
 
                         @Override
@@ -211,6 +212,10 @@ public class MainActivity extends AppCompatActivity {
                             viewHolder.laday.setText(result.getLunarday());
                             viewHolder.lamonth.setText(result.getLunarmonth());
                             viewHolder.layear.setText(result.getLunaryear());
+                            viewHolder.week.setText(result.getWeek());
+                            viewHolder.lucky.setText(result.getHuangli().getJi().toString());
+                            viewHolder.fierce.setText(result.getHuangli().getXiongshen());
+                            viewHolder.tiangan.setText(result.getGanzhi());
                             return convertView;
                         }
                         class ViewHolder {
@@ -218,12 +223,21 @@ public class MainActivity extends AppCompatActivity {
                             public TextView layear;
                             public TextView lamonth;
                             public TextView laday;
+                            public TextView week;
+                            public TextView lucky;
+                            public TextView fierce;
+                            public TextView tiangan;
 
                             public ViewHolder(View rootView) {
                                 this.rootView = rootView;
                                 this.layear = (TextView) rootView.findViewById(R.id.layear);
                                 this.lamonth = (TextView) rootView.findViewById(R.id.lamonth);
                                 this.laday = (TextView) rootView.findViewById(R.id.laday);
+                                this.week = (TextView) rootView.findViewById(R.id.week);
+                                this.lucky= (TextView) rootView.findViewById(R.id.lucky);
+                                this.fierce=(TextView)rootView.findViewById(R.id.fierce);
+                                this.tiangan=(TextView)rootView.findViewById(R.id.tiangan);
+
                             }
 
                         }

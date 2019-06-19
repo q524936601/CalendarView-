@@ -1,36 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-   >
-
-    <TextView
-        android:id="@+id/layear"
+    android:background="@drawable/back">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="50dp"
-        android:text="农历年"
-        android:textSize="30sp" />
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/altitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="农历日期:"
+                android:textSize="20dp" />
 
-    <TextView
-        android:id="@+id/lamonth"
+            <TextView
+                android:id="@+id/layear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/altitle"
+                android:layout_gravity="center_horizontal"
+                android:text="农历年"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lamonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="农历月"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/laday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="农历日"
+                android:textSize="24sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/weekis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期:"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/laday"
+                android:layout_toRightOf="@+id/weekis"
+                android:text="几"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layear"
-        android:text="农历月"
-        android:textSize="24sp" />
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp">
 
-    <TextView
-        android:id="@+id/laday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layear"
-        android:layout_toRightOf="@+id/lamonth"
-        android:text="农历日"
-        android:textSize="24sp"
-       />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/lucky_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/laday"
+                android:text="吉:"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/lucky"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/lucky_title"
+                android:text="吉神"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/fierce_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="凶:"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/fierce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="凶神"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tiangan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="天干地支:"/>
+            <TextView
+                android:id="@+id/tiangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="天干"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
 
