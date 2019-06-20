@@ -36,11 +36,14 @@ public class MainActivity extends AppCompatActivity {
     private static final int FAIL = -1;
     private CalendarView calendarView;
     private TextView chooseDate;
+
+
     private List<information> listdata = new ArrayList<>();
     private static String address = "https://api.jisuapi.com/calendar/query?appkey=99e885df3ecc7add&date=";
     private int[] cDate = CalendarUtil.getCurrentDate();
     private MyHandler handler = new MyHandler();
     private ListView lv_information;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +80,9 @@ public class MainActivity extends AppCompatActivity {
         title.setText(cDate[0] + "年" + cDate[1] + "月");
         chooseDate.setText("当前选中的日期：" + cDate[0] +"年"+ cDate[1] + "月" + cDate[2] + "日");
 
+
+
+
         calendarView.setOnPagerChangeListener(new OnPagerChangeListener() {
             @Override
             public void onPagerChanged(int[] date) {
@@ -87,9 +93,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSingleChoose(View view, DateBean date) {
                 title.setText(date.getSolar()[0] + "年" + date.getSolar()[1] + "月");
+
                 String data = date.getSolar()[0] + "-" + date.getSolar()[1] + "-" + date.getSolar()[2];
                 if (date.getType() == 1) {
                     chooseDate.setText("当前选中的日期：" + date.getSolar()[0] + "年" + date.getSolar()[1] + "月" + date.getSolar()[2] + "日");
+
                     HttpUtils.sendOkhttpRequest(address + data, new Callback() {
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {
@@ -209,41 +217,40 @@ public class MainActivity extends AppCompatActivity {
                                 viewHolder = (ViewHolder) convertView.getTag();
                             }
                             cn.edu.gdpt.myapplication.information.ResultBean result = listdata.get(position).getResult();
-                            viewHolder.laday.setText(result.getLunarday());
-                            viewHolder.lamonth.setText(result.getLunarmonth());
-                            viewHolder.layear.setText(result.getLunaryear());
+                            viewHolder.layear.setText(result.getHuangli().getNongli());
                             viewHolder.week.setText(result.getWeek());
                             viewHolder.lucky.setText(result.getHuangli().getJi().toString());
                             viewHolder.fierce.setText(result.getHuangli().getXiongshen());
                             viewHolder.tiangan.setText(result.getGanzhi());
                             viewHolder.yi.setText(result.getHuangli().getYi().toString());
                             viewHolder.ji.setText(result.getHuangli().getJi().toString());
+                            viewHolder.textDate.setText(result.getDay());
+                            viewHolder.suici.setText(result.getHuangli().getSuici().toString());
                             return convertView;
                         }
                         class ViewHolder {
                             public View rootView;
                             public TextView layear;
-                            public TextView lamonth;
-                            public TextView laday;
                             public TextView week;
                             public TextView lucky;
                             public TextView fierce;
                             public TextView tiangan;
                             public TextView yi;
                             public TextView ji;
+                            public TextView textDate;
+                            public TextView suici;
 
                             public ViewHolder(View rootView) {
                                 this.rootView = rootView;
                                 this.layear = (TextView) rootView.findViewById(R.id.layear);
-                                this.lamonth = (TextView) rootView.findViewById(R.id.lamonth);
-                                this.laday = (TextView) rootView.findViewById(R.id.laday);
                                 this.week = (TextView) rootView.findViewById(R.id.week);
                                 this.lucky= (TextView) rootView.findViewById(R.id.lucky);
                                 this.fierce=(TextView)rootView.findViewById(R.id.fierce);
                                 this.tiangan=(TextView)rootView.findViewById(R.id.tiangan);
                                 this.yi=(TextView)rootView.findViewById(R.id.yi);
                                 this.ji=(TextView)rootView.findViewById(R.id.ji);
-
+                                this.textDate=(TextView)rootView.findViewById(R.id.textDate);
+                                this.suici=(TextView)rootView.findViewById(R.id.suici);
                             }
 
                         }

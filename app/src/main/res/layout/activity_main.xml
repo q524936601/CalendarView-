@@ -59,6 +59,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_marginTop="20dp">
 
         <TextView
@@ -68,9 +69,10 @@
             android:gravity="center"
             android:onClick="today"
             android:text="今天"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="14sp"
-            android:background="@drawable/one"
+            android:background="@drawable/button"
+            android:layout_weight="1"
              />
 
         <TextView
@@ -80,10 +82,12 @@
             android:gravity="center"
             android:onClick="someday"
             android:text="某天"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="14sp"
-            android:background="@drawable/one"
-             />
+            android:background="@drawable/button"
+            android:layout_weight="1"
+
+            />
 
         <TextView
             android:layout_width="40dp"
@@ -92,10 +96,12 @@
             android:gravity="center"
             android:onClick="start"
             android:text="首月"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="14sp"
-            android:background="@drawable/one"
-             />
+            android:background="@drawable/button"
+            android:layout_weight="1"
+
+            />
 
         <TextView
             android:layout_width="40dp"
@@ -104,42 +110,59 @@
             android:gravity="center"
             android:onClick="lastYear"
             android:text="上年"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="14sp"
-            android:background="@drawable/one"
-             />
+            android:background="@drawable/button"
+            android:layout_weight="1"
+
+            />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:gravity="center"
             android:onClick="nextYear"
             android:text="下年"
-            android:textColor="#000"
+            android:textColor="#fff"
             android:textSize="14sp"
-            android:background="@drawable/one"
-             />
+            android:background="@drawable/button"
+            android:layout_weight="1"
+
+            />
 
     </LinearLayout>
 
  <LinearLayout
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="20dp"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_marginTop="0dp"
      android:orientation="vertical"
+     android:layout_marginLeft="5dp"
+     android:layout_marginRight="5dp"
      >
      <TextView
          android:id="@+id/choose_date"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_gravity="center"
-         android:layout_marginTop="10dp" />
+         android:layout_marginTop="0dp"
+         android:textSize="0dp"
+         
+         />
 
-     <ListView
-         android:id="@+id/lv_information"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"></ListView>
+
+         <ListView
+             android:id="@+id/lv_information"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:scrollbars="none"
+             >
+         </ListView>
+
+
+
 
  </LinearLayout>
 
