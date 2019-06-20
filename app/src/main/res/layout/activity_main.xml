@@ -59,7 +59,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:gravity="center_horizontal">
 
         <TextView
             android:layout_width="40dp"
@@ -124,9 +124,9 @@
     </LinearLayout>
 
  <LinearLayout
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginTop="20dp"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_marginTop="5dp"
      android:orientation="vertical"
      >
      <TextView
@@ -139,7 +139,7 @@
      <ListView
          android:id="@+id/lv_information"
          android:layout_width="wrap_content"
-         android:layout_height="wrap_content"></ListView>
+         android:layout_height="match_parent"></ListView>
 
  </LinearLayout>
 
