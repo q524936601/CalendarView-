@@ -156,10 +156,20 @@
          <ListView
              android:id="@+id/lv_information"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="180dp"
              android:scrollbars="none"
              >
          </ListView>
+
+     <Button
+         android:id="@+id/huangli"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="黄历"
+         android:textSize="25dp"
+         android:textColor="#fff"
+         android:background="@drawable/button"
+         />
 
 
 

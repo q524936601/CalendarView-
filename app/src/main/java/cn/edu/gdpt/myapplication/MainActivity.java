@@ -1,6 +1,7 @@
 package cn.edu.gdpt.myapplication;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private int[] cDate = CalendarUtil.getCurrentDate();
     private MyHandler handler = new MyHandler();
     private ListView lv_information;
+    private Button btn_huangli;
 
 
     @Override
@@ -52,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
         final TextView title = (TextView) findViewById(R.id.title);
         lv_information = findViewById(R.id.lv_information);
         chooseDate = findViewById(R.id.choose_date);
+        btn_huangli = findViewById(R.id.huangli);
+
+        btn_huangli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ZiActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -219,11 +231,7 @@ public class MainActivity extends AppCompatActivity {
                             cn.edu.gdpt.myapplication.information.ResultBean result = listdata.get(position).getResult();
                             viewHolder.layear.setText(result.getHuangli().getNongli());
                             viewHolder.week.setText(result.getWeek());
-                            viewHolder.lucky.setText(result.getHuangli().getJi().toString());
-                            viewHolder.fierce.setText(result.getHuangli().getXiongshen());
                             viewHolder.tiangan.setText(result.getGanzhi());
-                            viewHolder.yi.setText(result.getHuangli().getYi().toString());
-                            viewHolder.ji.setText(result.getHuangli().getJi().toString());
                             viewHolder.textDate.setText(result.getDay());
                             viewHolder.suici.setText(result.getHuangli().getSuici().toString());
                             return convertView;
@@ -232,11 +240,7 @@ public class MainActivity extends AppCompatActivity {
                             public View rootView;
                             public TextView layear;
                             public TextView week;
-                            public TextView lucky;
-                            public TextView fierce;
                             public TextView tiangan;
-                            public TextView yi;
-                            public TextView ji;
                             public TextView textDate;
                             public TextView suici;
 
@@ -244,11 +248,7 @@ public class MainActivity extends AppCompatActivity {
                                 this.rootView = rootView;
                                 this.layear = (TextView) rootView.findViewById(R.id.layear);
                                 this.week = (TextView) rootView.findViewById(R.id.week);
-                                this.lucky= (TextView) rootView.findViewById(R.id.lucky);
-                                this.fierce=(TextView)rootView.findViewById(R.id.fierce);
                                 this.tiangan=(TextView)rootView.findViewById(R.id.tiangan);
-                                this.yi=(TextView)rootView.findViewById(R.id.yi);
-                                this.ji=(TextView)rootView.findViewById(R.id.ji);
                                 this.textDate=(TextView)rootView.findViewById(R.id.textDate);
                                 this.suici=(TextView)rootView.findViewById(R.id.suici);
                             }
