@@ -22,3 +22,6 @@
 1、添加ListView控件,新增相对性的list_item子布局,对子布局进行规划,将之与ListView关联，用于显示对应日期的详细内容。
 
 ### 2019-06-17 周一完成内容：
+1、添加了drawable中对TextView边框background的自定义和对Button的background的自定义新图案，优化视觉效果。
+2、添加ZiActivity转移MainActivity中的黄历内容并赋值在新的页面，实现点击当日跳转至黄历界面显示更多黄历信息的功能，优化用户体验。
+3、未完待续。。。
