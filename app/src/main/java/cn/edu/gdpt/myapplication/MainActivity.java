@@ -64,12 +64,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this,ZiActivity.class);
-                Bundle bundle =new Bundle();
-                bundle.putSerializable("list", (Serializable) listdata);
-                intent.putExtras(bundle);
-                startActivity(intent);
-
+                if (listdata == null){
+                    Toast.makeText(getApplicationContext(),"请点击日期！",Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(MainActivity.this,ZiActivity.class);
+                    Bundle bundle =new Bundle();
+                    bundle.putSerializable("list", (Serializable) listdata);
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
             }
         });
 
