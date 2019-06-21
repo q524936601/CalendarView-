@@ -26,6 +26,7 @@ import com.othershe.calendarview.utils.CalendarUtil;
 import com.othershe.calendarview.weiget.CalendarView;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView chooseDate;
 
 
-    private List<information> listdata = new ArrayList<>();
+    private List<information> listdata;
     private static String address = "https://api.jisuapi.com/calendar/query?appkey=99e885df3ecc7add&date=";
     private int[] cDate = CalendarUtil.getCurrentDate();
     private MyHandler handler = new MyHandler();
@@ -60,8 +61,13 @@ public class MainActivity extends AppCompatActivity {
         btn_huangli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity.this,ZiActivity.class);
+                Bundle bundle =new Bundle();
+                bundle.putSerializable("list", (Serializable) listdata);
+                intent.putExtras(bundle);
                 startActivity(intent);
+
             }
         });
 
@@ -198,6 +204,7 @@ public class MainActivity extends AppCompatActivity {
             super.handleMessage(msg);
             switch (msg.what) {
                 case SUCCESS:
+                    listdata = new ArrayList<>();
                     listdata.clear();
                     String json = (String) msg.obj;
                     information information = new Gson().fromJson(json, cn.edu.gdpt.myapplication.information.class);
@@ -252,7 +259,6 @@ public class MainActivity extends AppCompatActivity {
                                 this.textDate=(TextView)rootView.findViewById(R.id.textDate);
                                 this.suici=(TextView)rootView.findViewById(R.id.suici);
                             }
-
                         }
                     });
                     break;

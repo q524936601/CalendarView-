@@ -1,8 +1,9 @@
 package cn.edu.gdpt.myapplication;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class information {
+public class information implements Serializable {
 
     /**
      * status : 0
@@ -38,7 +39,7 @@ public class information {
         this.result = result;
     }
 
-    public static class ResultBean {
+    public static class ResultBean implements Serializable{
         /**
          * year : 2015
          * month : 10
@@ -153,7 +154,7 @@ public class information {
             this.huangli = huangli;
         }
 
-        public static class HuangliBean {
+        public static class HuangliBean implements Serializable{
             /**
              * nongli : 农历二〇一五年九月初十
              * taishen : 厨灶厕外西南
