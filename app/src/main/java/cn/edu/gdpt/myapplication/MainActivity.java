@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextView title = (TextView) findViewById(R.id.title);
         lv_information = findViewById(R.id.lv_information);
-        chooseDate = findViewById(R.id.choose_date);
+
         btn_huangli = findViewById(R.id.huangli);
 
         btn_huangli.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 .init();
 
         title.setText(cDate[0] + "年" + cDate[1] + "月");
-        chooseDate.setText("当前选中的日期：" + cDate[0] +"年"+ cDate[1] + "月" + cDate[2] + "日");
+
 
 
 
@@ -114,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String data = date.getSolar()[0] + "-" + date.getSolar()[1] + "-" + date.getSolar()[2];
                 if (date.getType() == 1) {
-                    chooseDate.setText("当前选中的日期：" + date.getSolar()[0] + "年" + date.getSolar()[1] + "月" + date.getSolar()[2] + "日");
 
                     HttpUtils.sendOkhttpRequest(address + data, new Callback() {
                         @Override

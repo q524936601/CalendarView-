@@ -62,12 +62,13 @@ public class ZiActivity extends AppCompatActivity {
                     viewHolder = (ViewHolder) convertView.getTag();
                 }
                 information.ResultBean result = listdata2.get(position).getResult();
-                viewHolder.lucky.setText(result.getHuangli().getJi().toString());
-                viewHolder.fierce.setText(result.getHuangli().getXiongshen());
-                viewHolder.yi.setText(result.getHuangli().getYi().toString());
-                viewHolder.ji.setText(result.getHuangli().getJi().toString());
+                viewHolder.lucky.setText(result.getHuangli().getJi().toString());  //吉
+                viewHolder.fierce.setText(result.getHuangli().getXiongshen());     //凶
+                viewHolder.yi.setText(result.getHuangli().getYi().toString());     //宜
+                viewHolder.ji.setText(result.getHuangli().getJi().toString());     //忌
 
                 return convertView;
+
             }
 
             class ViewHolder {

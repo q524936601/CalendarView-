@@ -4,89 +4,143 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/border"
+
     >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
 
         <TextView
             android:id="@+id/lucky_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="吉:"
-            android:textSize="24dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="吉"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:textColor="#3DFF13"
+            />
 
         <TextView
             android:id="@+id/lucky"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="吉神"
-            android:textSize="12dp" />
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#30FF02"
+            android:layout_margin="10dp"
+            />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
 
         <TextView
             android:id="@+id/fierce_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="凶:"
-            android:textSize="24dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="凶"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:textColor="#FF0202"
+            />
 
         <TextView
             android:id="@+id/fierce"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="凶神"
-            android:textSize="12dp" />
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FF0202"
+            android:layout_margin="10dp"
+
+            />
 
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="宜:"
-            android:textSize="24dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="宜"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:textColor="#FFA202"
+            />
 
         <TextView
             android:id="@+id/yi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="宜做"
-            android:textSize="12dp" />
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFA202"
+            android:layout_margin="10dp"
+
+            />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="忌:"
-            android:textSize="24dp" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="忌"
+            android:textSize="60dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:textColor="#02AFFF"
+
+            />
 
         <TextView
             android:id="@+id/ji"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="忌做"
-            android:textSize="12dp" />
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#02AFFF"
+            android:layout_margin="10dp"
+
+            />
 
     </LinearLayout>
 

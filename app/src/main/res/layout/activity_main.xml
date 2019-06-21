@@ -145,13 +145,17 @@
      android:layout_marginRight="5dp"
      android:divider="@null"
      >
-     <TextView
-         android:id="@+id/choose_date"
-         android:layout_width="wrap_content"
+
+     <Button
+         android:id="@+id/huangli"
+         android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_gravity="center"
-         android:layout_marginTop="0dp"
-         android:textSize="0dp"
+         android:text="今日黄历"
+         android:textSize="25dp"
+         android:textColor="#fff"
+         android:background="@drawable/button"
+         android:layout_marginTop="10dp"
+
          />
 
 
@@ -168,16 +172,6 @@
 
  </LinearLayout>
 
-    <Button
-        android:id="@+id/huangli"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="黄历"
-        android:textSize="25dp"
-        android:textColor="#fff"
-        android:background="@drawable/button"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        />
+
 
 </LinearLayout>
