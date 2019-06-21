@@ -146,6 +146,13 @@
      android:divider="@null"
      >
 
+     <TextView
+         android:id="@+id/choose_date"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:text=""/>
+
      <Button
          android:id="@+id/huangli"
          android:layout_width="match_parent"

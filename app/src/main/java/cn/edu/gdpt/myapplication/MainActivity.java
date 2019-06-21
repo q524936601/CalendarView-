@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         final TextView title = (TextView) findViewById(R.id.title);
         lv_information = findViewById(R.id.lv_information);
 
+        chooseDate = findViewById(R.id.choose_date);
+
         btn_huangli = findViewById(R.id.huangli);
 
         btn_huangli.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onSingleChoose(View view, DateBean date) {
                 title.setText(date.getSolar()[0] + "年" + date.getSolar()[1] + "月");
-
+                chooseDate.setText(date.getSolar()[0] + "年" + date.getSolar()[1] + "月" + date.getSolar()[2] + "日");
                 String data = date.getSolar()[0] + "-" + date.getSolar()[1] + "-" + date.getSolar()[2];
                 if (date.getType() == 1) {
 
@@ -170,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void today(View view) {
         calendarView.today();
-        chooseDate.setText("当前选中的日期：" + cDate[0] + "年" + cDate[1] + "月" + cDate[2] + "日");
+        chooseDate.setText( cDate[0] + "年" + cDate[1] + "月" + cDate[2] + "日");
     }
 
     public void lastMonth(View view) {
